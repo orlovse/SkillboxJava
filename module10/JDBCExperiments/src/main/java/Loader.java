@@ -27,5 +27,9 @@ public class Loader {
         } catch (SQLException e) {
             e.printStackTrace();
         }
+        
+        resultSet.close();
+        statement.close();
+        connection.close();
     }
 }
