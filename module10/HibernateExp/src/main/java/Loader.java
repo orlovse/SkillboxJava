@@ -13,7 +13,8 @@ public class Loader {
         Session session = sessionFactory.openSession();
 
         Teachers teachers = session.get(Teachers.class, 1);
-        System.out.println("Имя учителя: " + teachers.getName() + ", возраст учителя: " + teachers.getAge());
+        System.out.printf("id учителя - %d, имя - %s, зарплата - %d, возраст - %d",
+                teachers.getId(), teachers.getName(), teachers.getSalary(), teachers.getAge());
 
         sessionFactory.close();
     }
